@@ -1,0 +1,223 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /** Reset para REMS - 62.5% = 10px de 16px **/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+:root {
+    --principal: #f2f2f2;
+    --principal_osc: #353535;
+    --secundario: #fe4918;
+    --fuente_1: 'Open Sans', sans-serif;
+    --fuente_2: 'PT Sans', sans-serif;
+    --fuente_3: 'Oswald', sans-serif;
+}
+
+/* Global */
+body {
+    background-color: var(--principal);
+    font-family: var(--fuente_1);
+}
+.contenedor{
+    width: 98%;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width:480px){
+    .contenedor{
+        width: 95%;
+    }
+    
+}
+
+@media only screen and (min-width:768px){
+    .contenedor{
+        width: 90%;
+    }
+    
+}
+
+@media only screen and (min-width:992px){
+    .contenedor{
+        width: 90%;
+        max-width: 1100px;
+    }
+    
+}
+
+h2 {
+    font-family: var(--fuente_3);
+}
+
+/* Header */
+.hero {
+    background-image: url(../img/encabezado.jpg);
+    height: 100vh;
+    background-position: top center;
+    background-size: cover;
+}
+
+.contenido-header {
+    padding-top: 4rem;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+.redes-sociales a {
+    font-size: 3rem;
+    text-decoration: none;
+    color: white;
+    margin-right: 3rem;
+}
+
+.redes-sociales a:last-of-type {
+    margin: 0;
+}
+
+
+
+.informacion-evento {
+    display: block;
+}
+
+@media only screen and (min-width:768px) {
+    .informacion-evento {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+}
+
+
+.informacion-evento p {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+
+.informacion-evento i {
+    color: var(--secundario);
+}
+
+@media only screen and (min-width:768px) {
+    h1.nombre-sitio {
+        font-size: 50vw;
+    }
+}
+
+h1.nombre-sitio {
+    font-size: 10vw;
+    font-family: var(--fuente_2);
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+}
+
+p.slogan {
+    text-transform: lowercase;
+    font-size: 2rem;
+    margin: 0;
+}
+
+p.slogan span {
+    font-weight: bold;
+}
+
+/* Barra */
+
+.barra{
+    background: var(--principal_osc);
+}
+
+
+.barra .contenedor{
+    padding: 2rem 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 80%;
+}
+.logo img{
+    width: 100%;
+}
+@media only screen and (min-width:768px){
+    .logo {
+        width: 33%;
+    }
+}
+
+/* Navegacion principal */
+
+
+.navegacion-principal{
+    /* display: none; */
+}
+
+@media only screen and (min-width:768px){
+    .navegacion-principal{
+        display: block;
+    }
+}
+
+
+.navegacion-principal a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: 3rem;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.navegacion-principal a:hover{
+    background: var(--secundario);
+    transition: 1s all ease;
+}
+.navegacion-principal a:last-of-type{
+    margin: 0;
+    border: 2px solid var(--secundario);
+    color: var(--secundario);
+ }
+
+
+ .navegacion-principal a:last-of-type:hover{
+     background:var(--secundario);
+     color:white;
+     transition: all 1s;
+     
+ }
+
+/* Menu movil */
+
+.menu-movil{
+    width: 60px;
+    margin-right: 1rem;
+}
+
+.menu-movil:hover{
+    cursor: pointer;
+}
+
+.menu-movil span{
+    height: .8rem;
+    margin-bottom: .6rem;
+    background-color: white;
+    display: block;
+}
+
+@media only screen and (min-width:768px){
+    .menu-movil{
+        display: none;
+    }
+}
