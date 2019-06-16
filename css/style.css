@@ -15,6 +15,7 @@ html {
     --principal: #f2f2f2;
     --principal_osc: #353535;
     --secundario: #fe4918;
+    --secundario_osc: #e33000;
     --fuente_1: 'Open Sans', sans-serif;
     --fuente_2: 'PT Sans', sans-serif;
     --fuente_3: 'Oswald', sans-serif;
@@ -46,14 +47,74 @@ body {
 
 @media only screen and (min-width:992px){
     .contenedor{
-        width: 90%;
-        max-width: 1100px;
+        width: 85%;
+        
     }
     
 }
 
+
+@media only screen and (min-width:1920px){
+    .contenedor{
+        width: 80%;
+        max-width: 1800;
+    }
+    
+}
+
+
+.seccion{
+    padding: 3rem 0;
+}
+
+.seccion p {
+    font-size: 2rem;
+    text-align: center;
+}
 h2 {
     font-family: var(--fuente_3);
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2::after{
+    content: '';
+    margin: 0 auto;
+    background-image: url(../img/separador.png);
+    height: 3rem;
+    width: 10rem;
+    display:block;
+}
+
+h3{
+    font-size: 2.5rem;
+    color: var(--secundario);
+    font-family: var(--fuente_2);
+    margin: 0;
+}
+
+.button{
+    font-family: var(--fuente_3);
+    background-color: var(--secundario);
+    padding: 1rem 4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    margin-top: 3rem;
+    display: inline-block;
+    transition: 1s all ease;
+
+}
+
+.button:hover{
+    background-color: var(--secundario_osc);
+}
+
+
+.contenedor-buttons{
+    display: flex;
 }
 
 /* Header */
@@ -81,7 +142,6 @@ h2 {
 .redes-sociales a:last-of-type {
     margin: 0;
 }
-
 
 
 .informacion-evento {
@@ -142,6 +202,7 @@ p.slogan span {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .logo {
@@ -154,19 +215,22 @@ p.slogan span {
     .logo {
         width: 33%;
     }
+
+    .barra .contenedor{
+        flex-direction: row;
+    }
+
 }
 
 /* Navegacion principal */
 
 
 .navegacion-principal{
-    /* display: none; */
-}
-
-@media only screen and (min-width:768px){
-    .navegacion-principal{
-        display: block;
-    }
+    
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    text-align: center;
 }
 
 
@@ -175,14 +239,14 @@ p.slogan span {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.5rem;
-    margin-right: 3rem;
     padding: 1rem;
     text-transform: uppercase;
+    margin: 0;
+    transition: 1s all ease;
 }
 
 .navegacion-principal a:hover{
     background: var(--secundario);
-    transition: 1s all ease;
 }
 .navegacion-principal a:last-of-type{
     margin: 0;
@@ -197,6 +261,30 @@ p.slogan span {
      transition: all 1s;
      
  }
+
+
+
+ @media only screen and (min-width:768px){
+    .navegacion-principal{
+        display: block;
+        width: auto;
+    }
+
+    .navegacion-principal a{
+        margin-right: 3rem;
+        font-size: 1.2rem;
+    }
+}
+
+
+@media only screen and (min-width:992px){
+.navegacion-principal a{
+        font-size: 2rem;
+    }
+}
+
+
+
 
 /* Menu movil */
 
@@ -220,4 +308,101 @@ p.slogan span {
     .menu-movil{
         display: none;
     }
+
+    .logo-movil{
+        display: contents!important;
+    }
+}
+
+.logo-movil{
+    display: flex;
+    align-items: center;
+}
+
+
+/* Talleres */
+
+.programa{
+    position: relative;
+}
+
+
+.video-fondo{
+    width: 100%;
+}
+.contenido-programa{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2rem;    
+}
+
+.programa-evento{
+    background-color: rgba(255, 255, 255, .8);
+    padding: 1.5rem;
+    margin-top: 8rem;
+}
+
+@media only screen and (min-width:768px){
+    .programa-evento{
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width:992px){
+    .programa-evento{
+        width: 50%;
+    }
+}
+
+.menu-programa{
+    width: 100%;
+    border-bottom: 1px var(--secundario) solid;
+    padding-bottom: 2rem;
+}
+
+nav.menu-programa{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+@media only screen and (min-width:768px){
+    nav.menu-programa{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+
+nav.menu-programa a{
+    text-decoration: none;
+    color: black;
+    font-family: var(--fuente_3);
+    margin-bottom: 1rem;
+}
+
+
+nav.menu-programa a i,
+.detalle-evento i{
+    color: var(--secundario);
+    font-size: 3rem;
+    margin-right: 1.5rem;
+}
+
+/* Detalle evento */
+.detalle-evento{
+    margin-top: 2rem;
+    border-bottom: 1px solid black;
+    padding: 0 2rem;
+}
+.detalle-evento:nth-child(2){
+    border:none;
+}
+
+.contenido-programa .contenedor-buttons{
+    justify-content: flex-end;
 }
