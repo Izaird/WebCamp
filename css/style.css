@@ -26,44 +26,45 @@ body {
     background-color: var(--principal);
     font-family: var(--fuente_1);
 }
-.contenedor{
+
+.contenedor {
     width: 98%;
     margin: 0 auto;
 }
 
-@media only screen and (min-width:480px){
-    .contenedor{
+@media only screen and (min-width:480px) {
+    .contenedor {
         width: 95%;
     }
-    
+
 }
 
-@media only screen and (min-width:768px){
-    .contenedor{
+@media only screen and (min-width:768px) {
+    .contenedor {
         width: 90%;
     }
-    
+
 }
 
-@media only screen and (min-width:992px){
-    .contenedor{
+@media only screen and (min-width:992px) {
+    .contenedor {
         width: 85%;
-        
+
     }
-    
+
 }
 
 
-@media only screen and (min-width:1920px){
-    .contenedor{
+@media only screen and (min-width:1920px) {
+    .contenedor {
         width: 80%;
         max-width: 1800;
     }
-    
+
 }
 
 
-.seccion{
+.seccion {
     padding: 3rem 0;
 }
 
@@ -71,6 +72,7 @@ body {
     font-size: 2rem;
     text-align: center;
 }
+
 h2 {
     font-family: var(--fuente_3);
     font-size: 3rem;
@@ -78,23 +80,23 @@ h2 {
     text-align: center;
 }
 
-h2::after{
+h2::after {
     content: '';
     margin: 0 auto;
     background-image: url(../img/separador.png);
     height: 3rem;
     width: 10rem;
-    display:block;
+    display: block;
 }
 
-h3{
+h3 {
     font-size: 2.5rem;
     color: var(--secundario);
     font-family: var(--fuente_2);
     margin: 0;
 }
 
-.button{
+.button {
     font-family: var(--fuente_3);
     background-color: var(--secundario);
     padding: 1rem 4rem;
@@ -108,12 +110,12 @@ h3{
 
 }
 
-.button:hover{
+.button:hover {
     background-color: var(--secundario_osc);
 }
 
 
-.contenedor-buttons{
+.contenedor-buttons {
     display: flex;
 }
 
@@ -192,13 +194,13 @@ p.slogan span {
 
 /* Barra */
 
-.barra{
+.barra {
     background: var(--principal_osc);
 }
 
 
-.barra .contenedor{
-    padding: 2rem 0 ;
+.barra .contenedor {
+    padding: 2rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -208,15 +210,17 @@ p.slogan span {
 .logo {
     width: 80%;
 }
-.logo img{
+
+.logo img {
     width: 100%;
 }
-@media only screen and (min-width:768px){
+
+@media only screen and (min-width:768px) {
     .logo {
         width: 33%;
     }
 
-    .barra .contenedor{
+    .barra .contenedor {
         flex-direction: row;
     }
 
@@ -225,8 +229,8 @@ p.slogan span {
 /* Navegacion principal */
 
 
-.navegacion-principal{
-    
+.navegacion-principal {
+
     width: 100%;
     display: none;
     flex-direction: column;
@@ -234,8 +238,8 @@ p.slogan span {
 }
 
 
-.navegacion-principal a{
-    color:white;
+.navegacion-principal a {
+    color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.5rem;
@@ -245,40 +249,41 @@ p.slogan span {
     transition: 1s all ease;
 }
 
-.navegacion-principal a:hover{
+.navegacion-principal a:hover {
     background: var(--secundario);
 }
-.navegacion-principal a:last-of-type{
+
+.navegacion-principal a:last-of-type {
     margin: 0;
     border: 2px solid var(--secundario);
     color: var(--secundario);
- }
+}
 
 
- .navegacion-principal a:last-of-type:hover{
-     background:var(--secundario);
-     color:white;
-     transition: all 1s;
-     
- }
+.navegacion-principal a:last-of-type:hover {
+    background: var(--secundario);
+    color: white;
+    transition: all 1s;
+
+}
 
 
 
- @media only screen and (min-width:768px){
-    .navegacion-principal{
+@media only screen and (min-width:768px) {
+    .navegacion-principal {
         display: block;
         width: auto;
     }
 
-    .navegacion-principal a{
+    .navegacion-principal a {
         margin-right: 3rem;
         font-size: 1.2rem;
     }
 }
 
 
-@media only screen and (min-width:992px){
-.navegacion-principal a{
+@media only screen and (min-width:992px) {
+    .navegacion-principal a {
         font-size: 2rem;
     }
 }
@@ -288,33 +293,33 @@ p.slogan span {
 
 /* Menu movil */
 
-.menu-movil{
+.menu-movil {
     width: 60px;
     margin-right: 1rem;
 }
 
-.menu-movil:hover{
+.menu-movil:hover {
     cursor: pointer;
 }
 
-.menu-movil span{
+.menu-movil span {
     height: .8rem;
     margin-bottom: .6rem;
     background-color: white;
     display: block;
 }
 
-@media only screen and (min-width:768px){
-    .menu-movil{
+@media only screen and (min-width:768px) {
+    .menu-movil {
         display: none;
     }
 
-    .logo-movil{
-        display: contents!important;
+    .logo-movil {
+        display: contents !important;
     }
 }
 
-.logo-movil{
+.logo-movil {
     display: flex;
     align-items: center;
 }
@@ -322,63 +327,66 @@ p.slogan span {
 
 /* Talleres */
 
-.programa{
+.programa {
     position: relative;
 }
 
 
-.video-fondo{
+.video-fondo {
     width: 100%;
 }
-.contenido-programa{
+
+.contenido-programa {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 2rem;    
+    font-size: 2rem;
 }
 
-.programa-evento{
+.programa-evento {
     background-color: rgba(255, 255, 255, .8);
     padding: 1.5rem;
-    margin-top: 8rem;
+    margin: 0rem;
 }
 
-@media only screen and (min-width:768px){
-    .programa-evento{
+@media only screen and (min-width:768px) {
+    .programa-evento {
+        margin-top: 2rem;
         width: 60%;
     }
 }
 
-@media only screen and (min-width:992px){
-    .programa-evento{
+@media only screen and (min-width:992px) {
+    .programa-evento {
+        margin-top: 8rem;
         width: 50%;
     }
 }
 
-.menu-programa{
+.menu-programa {
     width: 100%;
     border-bottom: 1px var(--secundario) solid;
     padding-bottom: 2rem;
 }
 
-nav.menu-programa{
+nav.menu-programa {
     display: flex;
     flex-direction: column;
 
     align-items: center;
 }
 
-@media only screen and (min-width:768px){
-    nav.menu-programa{
+@media only screen and (min-width:768px) {
+    nav.menu-programa {
         flex-direction: row;
         justify-content: space-evenly;
     }
 }
 
 
-nav.menu-programa a{
+nav.menu-programa a {
     text-decoration: none;
     color: black;
     font-family: var(--fuente_3);
@@ -387,22 +395,23 @@ nav.menu-programa a{
 
 
 nav.menu-programa a i,
-.detalle-evento i{
+.detalle-evento i {
     color: var(--secundario);
     font-size: 3rem;
     margin-right: 1.5rem;
 }
 
 /* Detalle evento */
-.detalle-evento{
+.detalle-evento {
     margin-top: 2rem;
     border-bottom: 1px solid black;
     padding: 0 2rem;
 }
-.detalle-evento:nth-child(2){
-    border:none;
+
+.detalle-evento:nth-child(2) {
+    border: none;
 }
 
-.contenido-programa .contenedor-buttons{
+.contenido-programa .contenedor-buttons {
     justify-content: flex-end;
 }
