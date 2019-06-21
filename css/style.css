@@ -539,14 +539,14 @@ div.invitado:hover p{
 /* Contador */
 .parallax::before{
     width: 100%;
-    height: 100%;
-    background-size: cover;
+    height: 100% ;
+    background-size: cover !important;
     position: absolute;
     top: 0;
     left: 0;
-    background-position: center center;
-    background-repeat: no-repeat; 
-    background-attachment: fixed;  
+    background-position: center center !important;
+    background-repeat: no-repeat !important; 
+    background-attachment: fixed !important;  
 }
 .contador{
     position: relative;
@@ -583,6 +583,10 @@ ul.resumen-evento li{
     font-size: 8rem;
     margin-bottom: 1rem;
     display: block;
+    font-weight: bold;
+    font-family: var(--fuente_3);
+    margin-top: 2rem;
+
 }
 
 /* precios */
@@ -711,4 +715,102 @@ ul.lista-precios{
     width: 20%;
     border-radius: 50%;
     margin: 2rem;
+}
+
+
+/* Newsletter */
+
+.newsletter{
+    position: relative;
+    height: auto;
+}
+
+.newsletter::before{
+    background: url(../img/bg-newsletter.jpg);
+    content: '';
+    filter: brightness(0.4);
+
+
+}
+
+.newsletter .contenido{
+    padding: 10rem 0;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.newsletter p{
+    font-size: 2rem;
+}
+
+.newsletter h3{
+    color: white;
+    font-size: 15rem !important;
+}
+
+.transparente{
+    background: none;
+}
+
+
+/* Cuenta regresiva */
+.cuenta-regresiva ul{
+   display: flex;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+}
+
+.cuenta-regresiva ul li{
+    font-size: 3rem;
+    font-weight: bold;
+    flex-basis: 20rem;
+    text-align: center;
+}
+
+/* Footer */
+footer.site-footer{
+    background: #353535;
+    margin-top: 10rem;
+    padding: 5rem 0 0 1rem;
+}
+
+.site-footer .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.site-footer .contenido{
+    flex-basis: 40rem;
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.site-footer .contenido h3{
+    color: white ;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: var(--fuente_3);
+}
+
+
+.site-footer .contenido h3 span{
+    color: var(--secundario);
+}
+
+.site-footer .contenedor nav{
+    padding-top: 3rem;
+}
+
+
+.copyrigth{
+    background: #2e2e2e;
+    color: white;
+    text-align: center;
+    margin: 2rem  0 0 0;
+    font-size: 2rem;
+    padding: 1rem 0;
 }
